@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF1D9"
+    tools:context=".MainPage">
+
+    <ImageView
+        android:id="@+id/imageView_main_1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_main_2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_main_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/cilclenew" />
+
+    <ImageView
+        android:id="@+id/imageView_main_3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_main_4"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_main_2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_main_2"
+        app:srcCompat="@drawable/cilclenew" />
+
+    <ImageView
+        android:id="@+id/imageView_main_4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView_main_3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_main_3"
+        app:srcCompat="@drawable/cilclenew" />
+
+    <ImageView
+        android:id="@+id/imageView_main_2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_main_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView_main_1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_main_1"
+        app:srcCompat="@drawable/cilclenew" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/nublukdin"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_main_1"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_main_1"
+        app:layout_constraintStart_toStartOf="@+id/imageView_main_1"
+        app:layout_constraintTop_toTopOf="@+id/imageView_main_1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="109dp"
+        android:layout_height="66dp"
+        android:gravity="center_horizontal"
+        android:text="@string/causelukdin"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_main_2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_main_2"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="@+id/imageView_main_2"
+        app:layout_constraintTop_toTopOf="@+id/imageView_main_2"
+        app:layout_constraintVertical_bias="0.583" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="113dp"
+        android:layout_height="79dp"
+        android:gravity="center"
+        android:text="@string/advicelukdin"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_main_3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_main_3"
+        app:layout_constraintStart_toStartOf="@+id/imageView_main_3"
+        app:layout_constraintTop_toTopOf="@+id/imageView_main_3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="82dp"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="@string/signaldangeous"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_main_4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_main_4"
+        app:layout_constraintStart_toStartOf="@+id/imageView_main_4"
+        app:layout_constraintTop_toTopOf="@+id/imageView_main_4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

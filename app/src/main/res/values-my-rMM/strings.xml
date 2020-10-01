@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BabyKickmy</string>
+    <string name="babykick">BabyKickmy</string>
+    <string name="chooselanguahe">เลือกภาษาที่คุณต้องการmy</string>
+    <string name="nextinfistpage">ถัดไปmy</string>
+    <string name="nublukdin">นับลูกดิ้นmy</string>
+    <string name="causelukdin">สาเหตุของทารกดิ้นน้อยmy</string>
+    <string name="advicelukdin">คำแนะนำลูกดิ้นน้อยmy</string>
+    <string name="signaldangeous">สัญญาณอันตรายmy</string>
+</resources>
