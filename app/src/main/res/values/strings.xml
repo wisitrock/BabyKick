@@ -1,10 +1,32 @@
 <resources>
-    <string name="app_name">BabyKick</string>
+    <string name="app_name">" Baby  kick Ver. TH - Myan"</string>
     <string name="babykick">BabyKick</string>
-    <string name="chooselanguahe">choose your language</string>
-    <string name="nextinfistpage">next</string>
+    <string name="chooselanguahe">เลือกภาษาที่คุณต้องการ</string>
+    <string name="nextinfistpage">ถัดไป</string>
     <string name="nublukdin">นับลูกดิ้น</string>
     <string name="causelukdin">สาเหตุของทารกดิ้นน้อย</string>
     <string name="advicelukdin">คำแนะนำลูกดิ้นน้อย</string>
     <string name="signaldangeous">สัญญาณอันตราย</string>
+    <string name="title_activity_cause_scrolling">ScrollingActivity</string>
+    <string name="cause_2">2.อาจเกิดจากในโพรงมดลูกคับแคบ จนกระทั่งลูกแทบจะเคลื่อนไหวไม่ได้ หรือว่าเกิดจากความผิดปกติที่ทำให้เป็นอันตรายกับลูกจนลูกไม่มีแรงจะดิ้น ถ้าคุณแม่พบว่าเป็นกรณีหลัง ไม่ควรปล่อยไว้นาน อาจทำให้เสี่ยงต่อการเสียชีวิตในครรภ์ได้ แพทย์จะเร่งคลอด หรือตัดสินใจในการผ่าคลอด\n\n\</string>
+    <string name="cause_1">1.อายุครรภ์ที่มากขึ้นอยู่ในช่วงใกล้คลอด หรือเกินกำหนดคลอด รกจะเสื่อมสภาพไปตามอายุครรภ์ที่เพิ่มขึ้น อาหารและออกซิเจนที่ส่งผ่านรกไปยังลูกในครรภ์จะเริ่มมีปริมาณน้อยลง ซึ่งเป็นสาเหตุที่ทำให้ทารกดิ้นน้อยลง ภาวะอาการเช่นนี้ จะทำให้ทารกในครรภ์มีความเสี่ยงสูงต่อการเสียชีวิตในครรภ์ได้เช่นกัน คุณแม่ควรรีบไปพบแพทย์ทันที \n\n\</string>
+    <string name="cause_3">3.การดิ้นที่น้อยลงอย่างผิดปกติของทารกในครรภ์ มักเกิดร่วมกับภาวะการขาดออกซิเจนเรื้อรัง และอยู่ในภาวะอันตราย ซึ่งทารกในครรภ์จะดิ้นน้อยลง หรือหยุดดิ้นเป็นเวลา 12 – 48 ชั่วโมงก่อนจะเสียชีวิต เมื่อสังเกตว่าลูกดิ้นน้อยลงควรรีบพบแพทย์ทันที หรือพบแพทย์ก่อนจะครบ 12 ชั่วโมง\n\n\</string>
+    <string name="dangwe_message">สัญญาณอันตรายลูกดิ้นน้อยกว่า 10 ครั้งต่อวันลูกดิ้นแรงมากแล้วไม่ดิ้นอีกเลยไม่มีแม้อาการตอดตบๆให้รีบมาโรงพยาบาลอาการแพ้ท้องขึ้นไส้อาเจียนคาเต้านมหายใจไม่ออกน้ำหนักตัวไม่ขึ้น หรือในบางรายอาจจะลดลงมีเลือดออกทางช่องคลอด\n</string>
+    <string name="mylanguage">မြန်မာဘာသာ</string>
+    <string name="decrease">ลดจำนวนครั้ง</string>
+    <string name="showdata">แสดงข้อมูล</string>
+    <string name="backtomenu">กลับสู่หน้าหลัก</string>
+    <string name="advice_text_">เปลี่ยนท่า โดยนอนหงายหรือนอนคว่ำสักครู่กินอาหารหวานๆ แล้วรอประมาณ 2-3 นาทีฟังเพลงกดท้องด้านหนึ่งและสังเกตดูว่าเด็กจะดิ้นหรือไม่ดื่มน้ำเย็นจัดๆเพื่อให้ลูกตื่น</string>
+    <string name="good_text_dialog">ดีมาก</string>
+    <string name="advice_warning">* ถ้าทำทุกวิธีแล้วทารกยังไม่ดิ้นแนะนำให้มาพบแพทย์ที่โรงพยาบาล</string>
+    <string name="Notifications_count_down">แจ้งเตือน</string>
+    <string name="count_down_mes_noti">ไม่สามารถลดจำนวนการนับได้</string>
+    <string name="ok_button">ตกลง</string>
+    <string name="cancel_button">ยกเลิก</string>
+    <string name="need_to_cont_down_ques">ต้องการลบจำนวนการนับ 1 ครั้งหรือไหม่</string>
+    <string name="babyishealty">ทารกสุขภาพดี</string>
+    <string name="info_static">ข้อมูลสถิติ</string>
+    <string name="day_mount_year">วัน/เดือน/ปี</string>
+    <string name="count_nub_static">จำนวนครั้ง</string>
+
 </resources>

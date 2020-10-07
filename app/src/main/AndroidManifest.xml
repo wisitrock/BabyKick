@@ -9,10 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowData"></activity>
-        <activity android:name=".MainPage" />
-        <activity android:name=".CountKickActivity2" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".dangerous_MainActivity2"></activity>
+        <activity
+            android:name=".AdviceMainActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".CauseMainActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".ShowData"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".MainPage"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".CountKickActivity2"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

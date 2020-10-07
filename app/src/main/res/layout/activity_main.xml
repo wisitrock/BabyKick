@@ -5,27 +5,31 @@
     android:id="@+id/Layout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF1D9"
+    android:background="@color/colorBackground"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/TextView_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="@string/babykick"
         android:textSize="48sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_th"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/button_th"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="@drawable/btn_bg_red"
         android:text="ภาษาไทย"
+        app:layout_constraintBottom_toTopOf="@+id/textView_chooselag"
         app:layout_constraintEnd_toStartOf="@+id/button_my"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -36,7 +40,10 @@
         android:id="@+id/button_my"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ภาษาพม่า "
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/btn_bg_red"
+        android:text="@string/mylanguage"
         app:layout_constraintBottom_toBottomOf="@+id/button_th"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -48,10 +55,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:gravity="center"
         android:text="@string/chooselanguahe"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_th" />
 
@@ -60,7 +69,9 @@
         android:layout_width="304dp"
         android:layout_height="238dp"
         android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_next_st"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_chooselag"
         app:srcCompat="@drawable/babyfirst1" />
@@ -70,8 +81,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="@drawable/btn_bg_red"
         android:text="@string/nextinfistpage"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

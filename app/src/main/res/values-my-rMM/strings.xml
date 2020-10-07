@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BabyKickmy</string>
-    <string name="babykick">BabyKickmy</string>
-    <string name="chooselanguahe">เลือกภาษาที่คุณต้องการmy</string>
-    <string name="nextinfistpage">ถัดไปmy</string>
-    <string name="nublukdin">นับลูกดิ้นmy</string>
-    <string name="causelukdin">สาเหตุของทารกดิ้นน้อยmy</string>
-    <string name="advicelukdin">คำแนะนำลูกดิ้นน้อยmy</string>
-    <string name="signaldangeous">สัญญาณอันตรายmy</string>
+    <string name="app_name">" Baby  kick Ver. TH - Myan"</string>
+    <string name="babykick">BabyKick</string>
+    <string name="chooselanguahe">သင်ကြိုက်နှစ်သက်သောဘာသာစကားကိုရွေးချယ်ပါ</string>
+    <string name="nextinfistpage">နောက်တစ်ခု</string>
+    <string name="nublukdin">" ကလေးလှုပ်ရှားမှုရေတွတ်ခြင်"</string>
+    <string name="causelukdin">သန္ဓေသားနှစ်ပတ်သက်ပြီး</string>
+    <string name="advicelukdin">"အကြံပေးအချက်  "</string>
+    <string name="signaldangeous">အန္တရာယ်ရှိနိုင်မှန်အချက်ပြမှုမှာ</string>
+    <string name="cause_2">၂.  ထိုအပြင် သားအိမ်ကျဥ်းခြင်းကြောင့် ကလေးရွေ့လျားမနိုင်ဘဲ သိုမဟုတ် တစ်ခုခုမှလွဲမှားခြင်းကြောင့်ပုံမှန်မဖြစ်၍ရွေ့လျားဖို့အားအင်းမရှိခြင်း နှင့်ဗိုက်ထဲမှာပင် အသက်အန္တရာယ် ဆုံးရှုံးနိုင်ချေထိ့ရှိခြင်းကြောင့် မိခင်သည်ထိုအဖြစ်သို့ရောက်ရှိခဲ့လျှင် အချိန်ကြာကြီးမထားသင့်ဘဲ ဆရာဝန်သို့ထံသွား၍  ဆရာဝန်ဆုံးဖြက်ချက်အတိုင်း အမြန်ဆုံးမွေးဖွားပေးခြင်း တာမှမဟုတ်ဗိုက်ခွဲမွေးဖွားပေးခြင်း ဆောင်ရွက်သွားမည်။ \n\n\</string>
+    <string name="title_activity_cause_scrolling">ScrollingActivity</string>
+    <string name="cause_1">၁. ကိုယ်ဝန်ဆောင်ရင့်ခြင်းနှင့်မွေးဖွားခါးနီး  သို့မဟုတ် မွေးဖွားချိန်ထက်ကျော်လွန်၍  ချက်ကြိုးအလုပ်လုပ်မှုသည် သန္ဓေသားကို အစားအစာနှင့် အောက်စီဂျင် ပို့ပေးမှုလျော့နည်းလာပါသည် ထိုအကြောင့်ပြဿနာမှာ သန္ဓေသားလှုပ်ရှားမှုနည်းလာပြီး ဗိုက်ထဲကသန္ဓေသားကို အန္တရာယ်ကြီးမာစေပြီးအ သက်ဆုံးရှုံးနိုင်ချေထိ့ရှိခြင်းကြောင့် မိခင်သည်ဆရာဝန်ထံအမြန်ဆုံးသွားပြပါ။ \n\n\</string>
+    <string name="cause_3">"၃. ကလေးလှုပ်လျားမှုပုံမှန်ဘဲလျော့ကျလာခြင်းသည် အောက်စီဂျင်မရရှိခြင်းကြောင့်နှင့် အန္တရာယ်ကျရောက်သောအခြေအနေမှာရှိနေပါသည်  ထိုအချက်များသတိထား၍ ၁၂ နာရိမှ ၄၈ နာရိအတွင် ကလေးအသက်အန္တရာယ်ဆုံးရှုံး နိုင်ဖွယ်ရှိ၍ ကလေးအသက်အန္တရာယ်မဆုံးရှုံးခင် ဆရာဝန်ထံအမြန် ဆုံးသွားရောက်ခြင်း တာမှမဟုတ်ဖြစ်သည့်အချိန်မှစ၍ ၁၂ နာရိမပြည့်ခင်မှာဆရာဝန်ထံအရောက်သွားရမည် အကြံပေးအချက်   "</string>
+    <string name="mylanguage">မြန်မာဘာသာ</string>
+    <string name="backtomenu">ပင်မမီနူး</string>
+    <string name="showdata">အချက်အလက်ပြပါ</string>
+    <string name="advice_text_">"အနေထိုင်ပြောင်းလှည့်ပါ ခေတ္တခဏပလက်အိပ်ခြင်း တာမဟုတ် မှောက်ခုံအိပ်ခြင်း ချိုးသောအစားအစာစားပါ ပြီးရင် ၂ မိနစ် ၃ မိနစ်အကြာနေပြီး သီချင်းနားထောင်းပါ ဗိုက်တစ်ဖက်ကိုနိုပ်ပါ ပြီးရင်ကလေးလှုပ်လျားမှုကို သတိထားပါအလွန်းအေးသောအရည်များ မသောက်ရပါ ကလေးနိုးထလာနိုင်စေရန်အတွတ်ဖြစ်သည်။ "</string>
+    <string name="good_text_dialog">အရမ်းကောင်းပါသည်</string>
+    <string name="advice_warning">"* ထိုနည်းအတိုင်းအားလုံးလုပ်ပြီးသွားသော်လည်း ကလေးမလှုပ်သေးလျှင် ဆေးရုံတတ်ပြီးဆရာဝန်ထံသွားပြပါ  "</string>
+    <string name="dangwe_message">"အန္တရာယ်ရှိနိုင်ကြောင်းအသိပေးအချက်ပြသည်မှာ ကလေးလှုပ်မှုတစ်ရက်တွင် ၁၀ ကြိမ်ထက်နည်းခြင်း တာမှဟုတ် တအားပြင်းပြင်းလှုပ်ကန် ခြင်းနှင့် လုံးဝလှုပ်လျားမှုမရှိဘဲ ကိုယ်ဝန်ဆောင်နဲ့မတည့်ခြင်း အော့အန်ခြင်း အသက်ရှုကြပ်ခြင်း အလေးချိန်မတိုးခြင်း တာမှမဟုတ်အလေးချိန်လျော့ကျ ခြင်းတို့သည် တစ်ချို့သူတွေမှာ မွေးလမ်းကြောင်းမှတစ်ဆင့်သွေးဆင်းခြင်းတို့ကြောင့်ဖြစ်သည်။ "</string>
+    <string name="decrease">အကြိမ်အရေအတွက်ကိုလျှော့ချပါ</string>
+    <string name="Notifications_count_down">အသိပေးချက်များ</string>
+    <string name="count_down_mes_noti">အရေအတွက်လျှော့ချလို့မရပါဘူ</string>
+    <string name="ok_button">ရလား။</string>
+    <string name="cancel_button">ပယ်ဖျက်</string>
+    <string name="need_to_cont_down_ques">အရေအတွက်ကိုတစ်ကြိမ်လျှော့ချလိုပါသလား?</string>
+    <string name="babyishealty">ကျန်းမာသောကလေး</string>
+    <string name="info_static">စာရင်းအင်းဒေတာ</string>
+    <string name="day_mount_year">နေ့စွဲ / လ / နှစ်</string>
+    <string name="count_nub_static">အကြိမ်အရေအတွက်</string>
 </resources>

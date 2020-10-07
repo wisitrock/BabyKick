@@ -4,9 +4,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -30,12 +30,16 @@ public class CountKickActivity2 extends AppCompatActivity {
     String checkdate = "";
     String checkid = "";
     String  checkcount="";
+    String checktime1="";
+    String checktime2="";
+    String checktime3="";
     DatabaseHelper mDatabaseHelper;
     int count = 0;
-
+    int counttime1=0;
+    int counttime2=0;
+    int counttime3=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_count_kick2);
         mDatabaseHelper = new DatabaseHelper(this);
@@ -48,11 +52,25 @@ public class CountKickActivity2 extends AppCompatActivity {
             checkdate = data.getString(1);
             checkid = data.getString(0);
             checkcount = data.getString(2);
+            checktime1 = data.getString(3);
+            checktime2 = data.getString(4);
+            checktime3 = data.getString(5);
+            Log.i("countbaby", "checktime1 : " +checktime1);
+            Log.i("countbaby", "checktime2 : " +checktime2);
+            Log.i("countbaby", "checktime3 : " +checktime3);
         }
-      if (checkcount.isEmpty()){
+      if (checkcount.isEmpty()&&checktime1.isEmpty()&&checktime2.isEmpty()&&checktime3.isEmpty()){
           count=0;
+          counttime1=0;
+          counttime2=0;
+          counttime3=0;
+
       }else{
           count=Integer.parseInt(checkcount);
+          counttime1=Integer.parseInt(checktime1);
+          counttime2=Integer.parseInt(checktime2);
+          counttime3=Integer.parseInt(checktime3);
+
       }
         if (!currentDate.equals(checkdate)) {
             restcount();
@@ -69,9 +87,11 @@ public class CountKickActivity2 extends AppCompatActivity {
         imageView_CountKick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 count++;
                 Log.i("countbaby", " onClick");
                 String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+                String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
 
                 Cursor data = mDatabaseHelper.readAllData();
                 Log.i("countbaby", "data : " + data);
@@ -80,6 +100,12 @@ public class CountKickActivity2 extends AppCompatActivity {
                     checkdate = data.getString(1);
                     checkid = data.getString(0);
                     checkcount = data.getString(2);
+                    checktime1 = data.getString(3);
+                    checktime2 = data.getString(4);
+                    checktime3 = data.getString(5);
+                    Log.i("countbaby", "checktime1 : " +checktime1);
+                    Log.i("countbaby", "checktime2 : " +checktime2);
+                    Log.i("countbaby", "checktime3 : " +checktime3);
                 }
 
 
@@ -89,13 +115,32 @@ public class CountKickActivity2 extends AppCompatActivity {
 
                 if (currentDate.equals(checkdate)) {
                     Log.i("countbaby", " if(currentDate == checkdate)" + currentDate + " == " + checkdate);
-                    UpdateData(checkid, String.valueOf(count));
+                    if(Integer.parseInt(currentTime.substring(0,2))>=0&&Integer.parseInt(currentTime.substring(0,2))<10){
+                        counttime1++;
+                        UpdateData(checkid, String.valueOf(count),String.valueOf(counttime1),String.valueOf(counttime2),String.valueOf(counttime3));
+                    }else if(Integer.parseInt(currentTime.substring(0,2))>=10&&Integer.parseInt(currentTime.substring(0,2))<16){
+                        counttime2++;
+                        UpdateData(checkid, String.valueOf(count),String.valueOf(counttime1),String.valueOf(counttime2),String.valueOf(counttime3));
+                    }else if(Integer.parseInt(currentTime.substring(0,2))>=16&&Integer.parseInt(currentTime.substring(0,2))<=23){
+                        counttime3++;
+                        UpdateData(checkid, String.valueOf(count),String.valueOf(counttime1),String.valueOf(counttime2),String.valueOf(counttime3));
+                    }
+
                     if(count==10){
                         openWindownDialog();
                     }
                 } else {
+                    if(Integer.parseInt(currentTime.substring(0,2))>=0&&Integer.parseInt(currentTime.substring(0,2))<12){
+                        counttime1++;
+                        AddData(currentDate, String.valueOf(count),String.valueOf(counttime1),String.valueOf(counttime2),String.valueOf(counttime3));
+                    }else if(Integer.parseInt(currentTime.substring(0,2))>=12&&Integer.parseInt(currentTime.substring(0,2))<12){
+                        counttime2++;
+                        AddData(currentDate, String.valueOf(count),String.valueOf(counttime1),String.valueOf(counttime2),String.valueOf(counttime3));
+                    }else if(Integer.parseInt(currentTime.substring(0,2))>=18&&Integer.parseInt(currentTime.substring(0,2))<=23){
+                        counttime3++;
+                        AddData(currentDate, String.valueOf(count),String.valueOf(counttime1),String.valueOf(counttime2),String.valueOf(counttime3));
+                    }
 
-                    AddData(currentDate, String.valueOf(count));
                     Log.i("countbaby", "else");
                 }
 
@@ -121,15 +166,58 @@ public class CountKickActivity2 extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        Button button_down = findViewById(R.id.button_down_count);
+        button_down.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(count==0){
+                    AlertDialog.Builder dialog = new AlertDialog.Builder(CountKickActivity2.this);
+                    dialog.setTitle(R.string.Notifications_count_down);
+                    dialog.setMessage(R.string.count_down_mes_noti);
+                    dialog.setPositiveButton(R.string.ok_button, null);
+                    dialog.show();
+                }else{
+                    AlertDialog.Builder dialog = new AlertDialog.Builder(CountKickActivity2.this);
+                    dialog.setTitle(R.string.Notifications_count_down);
+                    dialog.setMessage(R.string.need_to_cont_down_ques);
+                    dialog.setNegativeButton(R.string.cancel_button, null);
+                    dialog.setPositiveButton(R.string.ok_button, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+                            count--;
+                            if(Integer.parseInt(currentTime.substring(0,2))>=0&&Integer.parseInt(currentTime.substring(0,2))<12){
+                                counttime1--;
+                                UpdateData(checkid, String.valueOf(count),String.valueOf(counttime1),String.valueOf(counttime2),String.valueOf(counttime3));
+                            }else if(Integer.parseInt(currentTime.substring(0,2))>=12&&Integer.parseInt(currentTime.substring(0,2))<18){
+                                counttime2--;
+                                UpdateData(checkid, String.valueOf(count),String.valueOf(counttime1),String.valueOf(counttime2),String.valueOf(counttime3));
+                            }else if(Integer.parseInt(currentTime.substring(0,2))>=18&&Integer.parseInt(currentTime.substring(0,2))<=23){
+                                counttime3--;
+                                UpdateData(checkid, String.valueOf(count),String.valueOf(counttime1),String.valueOf(counttime2),String.valueOf(counttime3));
+                            }
+
+                            TextView count_babykick = findViewById(R.id.textview_countkick);
+                            count_babykick.setText(String.valueOf(count));
+                            ProgressBar bar = findViewById(R.id.progressBar);
+                            bar.setProgress(count * 10);
+                        }
+                    });
+
+                    dialog.show();
+
+                }
+            }
+        });
     }
 
 
-    public void AddData(String newEntry, String newEntry2) {
-        mDatabaseHelper.addBook(newEntry, newEntry2);
+    public void AddData(String newEntry, String newEntry2,String time1,String time2,String time3) {
+        mDatabaseHelper.addBook(newEntry, newEntry2,time1,time2,time3);
     }
 
-    public void UpdateData(String newEntry, String newEntry2) {
-        mDatabaseHelper.updateData(newEntry, newEntry2);
+    public void UpdateData(String newEntry, String newEntry2,String time1,String time2,String time3) {
+        mDatabaseHelper.updateData(newEntry, newEntry2,time1,time2,time3);
     }
 
     /**

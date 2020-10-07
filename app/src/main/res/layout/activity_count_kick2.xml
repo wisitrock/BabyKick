@@ -5,41 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
+    android:background="@color/colorBackground"
     tools:context=".CountKickActivity2">
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="การนับลูกดิ้น"
-        android:textSize="52sp"
+        android:gravity="center"
+        android:text="@string/nublukdin"
+        android:textSize="42sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <ImageView
         android:id="@+id/imageView_babykick"
-        android:layout_width="157dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="156dp"
+        android:layout_height="183dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/effectclick"
+        app:layout_constraintBottom_toTopOf="@+id/button_down_count"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_countkick"
-        app:srcCompat="@drawable/babycount" />
+        app:srcCompat="@android:color/transparent" />
 
     <TextView
         android:id="@+id/textview_countkick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="48dp"
         android:hint="0"
         android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_babykick"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -49,16 +56,20 @@
         android:layout_marginTop="76dp"
         android:progress="0"
         android:progressDrawable="@drawable/gradient_progress_bar"
+        app:layout_constraintBottom_toTopOf="@+id/textview_countkick"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_down_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Button"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/btn_bg_red"
+        android:text="@string/decrease"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_showdata"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -69,12 +80,15 @@
         android:id="@+id/button_showdata"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ShowData"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/btn_bg_red"
+        android:text="@string/showdata"
+        app:layout_constraintBottom_toBottomOf="@+id/button_down_count"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/button_down_count"
+        app:layout_constraintTop_toTopOf="@+id/button_down_count"
         app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,10 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
     private Context context;
     private static final String DATABASE_NAME = "BookLibrary.db";
@@ -18,6 +22,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_ID = "_id";
     private static final String COLUMN_TITLE = "book_title";
     private static final String COLUMN_AUTHOR = "book_author";
+    private static final String COLUMN_TIME1 = "morning";
+    private static final String COLUMN_TIME2 = "afternoon";
+    private static final String COLUMN_TIME3 = "Evening";
 
 
     DatabaseHelper(@Nullable Context context) {
@@ -30,7 +37,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String query = "CREATE TABLE " + TABLE_NAME +
                 " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_TITLE + " TEXT, " +
-                COLUMN_AUTHOR + " TEXT);";
+                COLUMN_AUTHOR + " TEXT,"+
+                COLUMN_TIME1 + " TEXT,"+
+                COLUMN_TIME2 + " TEXT,"+
+                COLUMN_TIME3 + " TEXT);";
         db.execSQL(query);
     }
     @Override
@@ -39,12 +49,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    void addBook(String title, String author){
+    void addBook(String title, String author,String time1,String time2,String time3){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
         cv.put(COLUMN_TITLE, title);
         cv.put(COLUMN_AUTHOR, author);
+        cv.put(COLUMN_TIME1, time1);
+        cv.put(COLUMN_TIME2, time2);
+        cv.put(COLUMN_TIME3, time3);
+
+
         long result = db.insert(TABLE_NAME,null, cv);
         if(result == -1){
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
@@ -64,13 +79,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    void updateData(String row_id,String author){
+    void updateData(String row_id,String author,String time1,String time2,String time3){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-
         cv.put(COLUMN_AUTHOR, author);
-
-
+        cv.put(COLUMN_TIME1, time1);
+        cv.put(COLUMN_TIME2,time2);
+        cv.put(COLUMN_TIME3, time3);
         long result = db.update(TABLE_NAME, cv, "_id=?", new String[]{row_id});
         if(result == -1){
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();

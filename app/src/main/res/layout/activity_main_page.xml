@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF1D9"
+    android:background="@color/colorBackground"
     tools:context=".MainPage">
 
     <ImageView
@@ -52,8 +52,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="113dp"
+        android:layout_height="107dp"
         android:gravity="center"
         android:text="@string/nublukdin"
         android:textColor="#000000"
@@ -65,23 +65,23 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="109dp"
-        android:layout_height="66dp"
-        android:gravity="center_horizontal"
+        android:layout_width="115dp"
+        android:layout_height="111dp"
+        android:gravity="center"
         android:text="@string/causelukdin"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView_main_2"
         app:layout_constraintEnd_toEndOf="@+id/imageView_main_2"
-        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="@+id/imageView_main_2"
         app:layout_constraintTop_toTopOf="@+id/imageView_main_2"
-        app:layout_constraintVertical_bias="0.583" />
+        app:layout_constraintVertical_bias="0.538" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="113dp"
-        android:layout_height="79dp"
+        android:layout_width="111dp"
+        android:layout_height="111dp"
         android:gravity="center"
         android:text="@string/advicelukdin"
         android:textColor="#000000"
@@ -93,8 +93,8 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="82dp"
-        android:layout_height="44dp"
+        android:layout_width="130dp"
+        android:layout_height="115dp"
         android:gravity="center"
         android:text="@string/signaldangeous"
         android:textColor="#000000"

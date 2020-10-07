@@ -37,8 +37,8 @@ public class ShowData extends AppCompatActivity {
         button_reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                deleteAllData();
-
+                Intent i = new Intent(ShowData.this, MainPage.class);
+                startActivity(i);
             }
         });
 
@@ -50,14 +50,13 @@ public class ShowData extends AppCompatActivity {
         //get the data and append to a list
         Cursor data = mDatabaseHelper.readAllData();
         ArrayList<String> listData = new ArrayList<>();
-        ArrayList<String> listData2 = new ArrayList<>();
         while(data.moveToNext()){
             //get the v alue from the database in column 1
             //then add it to the ArrayList
             if(data.getString(2).length()==1){
-                listData.add(data.getString(1)+"                                       "+data.getString(2));
+                listData.add(data.getString(1)+" "+data.getString(3)+" "+data.getString(4)+" "+data.getString(5)+" "+data.getString(2));
             }else{
-                listData.add(data.getString(1)+"                                     "+data.getString(2));
+                listData.add(data.getString(1)+" "+data.getString(3)+" "+data.getString(4)+" "+data.getString(5)+" "+data.getString(2));
             }
 
 
@@ -75,6 +74,7 @@ public class ShowData extends AppCompatActivity {
 
 
     }
+
     @Override
     public void onBackPressed() {
         // TODO Auto-generated method stub

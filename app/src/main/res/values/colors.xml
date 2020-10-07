@@ -3,5 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="colorRed">#c05c5c</color>
+    <color name="colorRed">#F88D8D</color>
+    <color name="colorCream">#FFF1D9</color>
+    <color name="colorBackground">#FADEE1</color>
+    FADEE1
+
 </resources>
